@@ -1,5 +1,11 @@
 module astroML
+export hello
 
-greet() = print("Hello World!")
+"""
+    hello(who::String)
 
-end # module
+Return "Hello, `who`".
+"""
+hello(who::String) = "Hello, $who"
+
+end
