@@ -1,5 +1,5 @@
 using Documenter, Example
 
-makedocs(modules = [Example], sitename = "Example.jl")
+makedocs(modules = [astroML], sitename = "AstroML.jl")
 
-deploydocs(repo = "github.com/JuliaLang/Example.jl.git")
+deploydocs(repo = "github.com/imaginingnever/astroML.jl.git")
