@@ -5,4 +5,4 @@ astroML.jl Julia package repo.
 
 Linux and macOS: [![Build Status](https://travis-ci.org/ezluzvaerus/astroML.jl.svg?branch=master)](https://travis-ci.org/ezluzvaerus/astroML.jl)
 
-[![Coverage Status](https://coveralls.io/repos/github/ezluzvaerus/astroML.jl/badge.svg)](https://coveralls.io/github/ezluzvaerus/astroML.jl)
+[![Coverage Status](https://coveralls.io/repos/github/ezluzvaerus/astroML.jl/badge.svg?branch=master)](https://coveralls.io/github/ezluzvaerus/astroML.jl?branch=master)
