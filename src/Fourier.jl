@@ -1,5 +1,5 @@
 module Fourier
-export sinegauss, sinegauss_PSD
+export sinegauss, sinegauss_PSD, ssinegauss_FT
 
 """
     sinegauss(t::Number, t0::Number, f0::Number, Q::Number)
@@ -22,5 +22,16 @@ function sinegauss_PSD(f::Number,t0::Number,f0::Number,Q::Number)
     Pf = pi / a * Base.MathConstants.eulergamma ^ (-2 * pi ^ 2 * (f - f0) ^ 2 / a)
     Pmf = pi / a * Base.MathConstants.eulergamma ^ (-2 * pi ^ 2 * (-f - f0) ^ 2 / a)
     return Pf + Pmf
+end
+
+"""Fourier transform of the sine-gaussian wavelet.
+This uses the convention
+.. math::
+   H(f) = integral[ h(t) exp(-2pi i f t) dt]
+"""
+function ssinegauss_FT(f::Number, t0::Number, f0::Number, Q::Number)
+    a = (f0 * 1. / Q) ^ 2
+    # add j array
+    return (sqrt(pi / a) * Base.MathConstants.eulergamma ^ (-2 * pi * f * t0) * Base.MathConstants.eulergamma ^ (-pi ^ 2 * (f - f0) ^ 2 / a))
 end
 end
