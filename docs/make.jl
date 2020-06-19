@@ -1,4 +1,4 @@
-using Documenter, Example
+using Documenter, astroML
 
 makedocs(modules = [astroML], sitename = "AstroML.jl")
 
