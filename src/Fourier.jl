@@ -1,5 +1,5 @@
 module Fourier
-export sinegauss, sinegauss_PSD, ssinegauss_FT
+export sinegauss, sinegauss_PSD, sinegauss_FT
 
 """
     sinegauss(t::Number, t0::Number, f0::Number, Q::Number)
