@@ -29,7 +29,7 @@ This uses the convention
 .. math::
    H(f) = integral[ h(t) exp(-2pi i f t) dt]
 """
-function ssinegauss_FT(f::Number, t0::Number, f0::Number, Q::Number)
+function sinegauss_FT(f::Number, t0::Number, f0::Number, Q::Number)
     a = (f0 * 1. / Q) ^ 2
     # add j array
     return (sqrt(pi / a) * Base.MathConstants.eulergamma ^ (-2 * pi * f * t0) * Base.MathConstants.eulergamma ^ (-pi ^ 2 * (f - f0) ^ 2 / a))
