@@ -21,7 +21,7 @@ function sinegauss_PSD(f::Number,t0::Number,f0::Number,Q::Number)
     a = (f0 * 1. / Q) ^ 2
     Pf = pi / a * Base.MathConstants.eulergamma ^ (-2 * pi ^ 2 * (f - f0) ^ 2 / a)
     Pmf = pi / a * Base.MathConstants.eulergamma ^ (-2 * pi ^ 2 * (-f - f0) ^ 2 / a)
-    return Pf + Pmf
+    return abs(Pf + Pmf)
 end
 
 """Fourier transform of the sine-gaussian wavelet.
